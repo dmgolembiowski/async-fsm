@@ -1,0 +1,34 @@
+states:
+    - state_alpha
+    - stateA
+    - stateB
+    - stateC
+    - state_zeta
+inputs:
+    - begin
+    - transition_1
+    - transition_2
+    - transition_3
+    - transition_4
+    - transition_7
+    - finish
+table:
+    state_alpha:
+        begin:
+            - stateA
+    stateA:
+        transition_1:
+            - stateB
+        transition_4:
+            - stateC
+    stateB:
+        transition_2:
+            - stateD
+    stateC:
+        transition_7:
+            - stateC
+        transition_3:
+            - stateB
+    stateD:
+        finish:
+            - state_zeta

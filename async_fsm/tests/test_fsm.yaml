@@ -23,3 +23,27 @@ table:
   done:
     reset:
       - idle
+
+states:
+    - state_alpha
+    - stateA
+    - stateB
+    - stateC
+    - state_zeta
+inputs:
+    - begin
+    - transition_1
+    - transition_2
+    - transition_3
+    - transition_4
+    - transition_5
+    - transition_7
+    - finish
+table:
+    state_alpha:
+        begin:
+          - stateA
+    stateA:
+        transition_4:
+          - stateC
+            
